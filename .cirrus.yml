@@ -9,7 +9,9 @@ task:
       - cd rspec
       - echo $RUBY_VERSION
       - cat Gemfile.lock || true
-    populate_script: bundle install
+    populate_script:
+      - cd rspec
+      - bundle install
   rspec_script:
     - cd rspec
     - bundle exec rspec --format json --out rspec.json
