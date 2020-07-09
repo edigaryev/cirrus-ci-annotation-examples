@@ -8,7 +8,7 @@ task:
     fingerprint_script:
       - cd rspec
       - echo $RUBY_VERSION
-      - cat Gemfile.lock
+      - cat Gemfile.lock || true
     populate_script: bundle install
   rspec_script:
     - cd rspec
